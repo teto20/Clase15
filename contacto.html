@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="Estilos/estilos.css">
+    <meta name="description" content="En Montana nos interesa sabes que necesitas. Contactanos">
+    <meta name="keywords" contecnt="FOTOGRAFIA, VIDEO, EVENTOS, COMERCIALES, REDES SOCIALES, DISEÑO GRAFICO">
+    <title>Contacto</title>
+</head>
+<body>
+    <div>
+        <header>
+            <nav class="bgc navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html"><img src="Media/logo.png" alt="logo" title="logo del sitio"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Montana <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="nosotros.html">Quienes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quehacemos.html">Que hacemos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                      </li>
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">Contacto</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+        </header>
+        <div class="container-fluid">
+            <h1 id="h1Contacto">Contacto</h1>
+                <div class="row">
+                    <section class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="direccion">
+                            <h3>Dirección</h3>
+                            <p>Avenida Siempreviva 742</p>
+                        </article>
+                        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="telefono">
+                            <h3>Teléfono</h3>
+                            <p>+598 94 123 456</p>
+                        </article>
+                        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="email">
+                            <h3>Email</h3>
+                            <p>emaildeprueba@gmail.com</p>
+                        </article>
+                    </section>
+                    <section class="col-xs-12 col-sm-12 col-md-8 col-lg-7">
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <label for="labelNombre">Nombre</label>
+                                    <input type="text" class="form-control" id="inputNombre" name="nombre">
+                                </div>
+                                <div class="form-group col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <label for="inputApellido">Apellido</label>
+                                    <input type="text" class="form-control" id="inputApellido">
+                                </div>
+                            </div>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                <label for="inputAddress">Direccion</label>
+                                <input type="text" class="form-control" id="inputDireccion">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                <label for="inputPais">Pais</label>
+                                <select id="inputPais" class="form-control">
+                                <option selected>Seleccione uno...</option>
+                                <option>Argentina</option>
+                                <option>Brasil</option>
+                                <option>Chile</option>
+                                <option>Uruguay</option>
+                                <option>Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                            </div>
+                        </div>
+                            <button type="submit" class="btn colorBoton">Enviar Formulario</button>
+                            <button type="button" class="btn colorBoton" data-toggle="modal" data-target="#alertaModal">Borrar Formulario</button> 
+                            <!-- Modal -->
+                            <div class="modal fade" id="alertaModal" tabindex="-1" aria-labelledby="alertaModal" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="alertaModal">Cuidado!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Esta seguro que desea borrar los datos del formulario?
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    <button type="reset" class="btn btn-danger" data-dismiss="modal">Borrar Formulario</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+        </div>
+        <footer class="pieDePagina pieDePaginaPocoContenido">
+            <span id="derechos">© Montana Studio. Todos los derechos reservados.</span>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>

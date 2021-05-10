@@ -1,0 +1,974 @@
+/* Reseteo CSS */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { height: 100%; }
+body { font-size: 100%; line-height: 1; font-family: 'Sen', sans-serif; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+p { font-size: 1.2em; line-height: 1.0em; color: #333; }
+
+/* fin reseteo css */
+
+/*-------------------------------------------------------------------------------------------*/
+
+/* Estilos generales*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+
+body {
+    background-color: #292929;
+
+}
+
+.bgc {
+    background-color: black;
+    opacity: .7;
+}
+
+.navegacion {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-items: center;
+    grid-area: links; 
+}
+
+.navegacion ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    list-style: none;  
+}
+
+.navegacion li {
+    list-style-type: none;
+    display: inline;
+
+}
+/*Se crea un header integrando el logo con la navegacion*/
+.mainHeader {
+    display: grid;
+    grid-template-areas: 
+    "logo links";
+    grid-template-columns:6% auto;
+    grid-template-rows: auto;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    opacity: .7;
+    grid-area: cabeza;
+
+}
+
+.imgLogo {
+    grid-area: logo;
+    padding: 1em;
+}
+
+a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #A6A6A6;
+}
+
+.paginaActual {
+    color: #f5245f;
+}
+
+h1 {
+    color: white;
+    font-size: 3.4em;
+    margin-bottom: 10%;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 3em;
+    margin-bottom: 10%;
+    font-weight: 600;
+    color: #A6A6A6;
+}
+
+h3 {
+    color: #f5245f;
+    font-size: 2em;
+    padding-bottom: 1em;
+}
+
+small {
+    color: #f5245f;
+    font-size: 1.2em;
+}
+
+span {
+    color: #A6A6A6;
+}
+
+p {
+    color: #A6A6A6;
+    font-size: 1em;
+    line-height: 1.8em;
+}
+
+/* Go to top */
+
+
+#irArribaTexto {
+    padding-left: 150px;
+    color: #f5245f;
+}
+.goTop {
+    height: 3vh;
+    padding-left: 15px;
+}
+
+.goTop:hover {
+    transform: scale(1.5,1.5);
+    transition: 1s;
+}
+
+.goTop:active {
+    animation-duration: 3s;
+    animation-name: goToTop;
+}
+/* Esto no logre hacerlo funcionar*/
+@keyframes goToTop {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+ /*Se creo una barra lataral para colocar los iconos de las diferentes redes sociales*/
+.redesSociales {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    padding: 5em 0.5em;
+    height: 100vh;
+    top: 0;
+    background-color: black;
+    opacity: .7;
+    grid-area: redesSociales; 
+
+    /* No*/
+}
+
+.redesSociales a {
+    width: 50%;
+    padding-top: 1em;
+}
+
+.pieDePagina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+    height: 5vh;
+    grid-area: pie;
+}
+
+.pieDePaginaPocoContenido {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos de la home page */
+
+#videoFondo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#overlayVideo {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:#2d2c2c;
+    opacity: 0.7;
+    z-index:-1;
+    /*No se como hacer para que se tome el 100% del alto de la plantalla eliminando la barra, la url etc. Se puede ver esto que comento en la home entre la seccion principal y la seccion que hacemos. Hay un pequeño espacio que esta sin overlay*/
+}
+
+#principal {
+    height: 90vh;
+    width: 40%;
+    grid-area: banner;
+    padding-left: 6%;
+    padding-top: 13%;
+    line-height:1.1;
+    grid-area: principal;
+}
+ /*Se alpica flex a los diferentes elementos de Que Hacemos de la home para poder posicionarlos de mejor manera*/
+#tituloQueHacemosHome {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    grid-area: tituloQueHacemosHome;
+    text-align: center ;
+}
+
+#descQueHacemosHome {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2em;
+    grid-area: desc;
+}
+
+#redesSocialesHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../Media/redes-sociales.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 2em;
+    grid-area: redes;
+    
+}
+
+#eventosHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../media/eventos.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 2em;
+    grid-area: eventos;
+}
+
+#diseñoGraficoHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../media/grafico.jpg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    padding: 2em;
+    grid-area: disenio;
+}
+
+#publicidadHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(../media/publicidad.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 2em;
+    grid-area: publicidad;
+}
+/*Se crea la grilla para que hacemos*/
+#queHacemosHome {
+    display: grid;
+    grid-template-areas: 
+    "tituloQueHacemosHome redes eventos"
+    "desc disenio publicidad";
+
+    grid-template-rows: auto auto ;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+    height: 100vh;
+    width: 100%;
+    padding: 1em;
+    grid-area: queHacemosHome;
+    background-color: black;
+}
+/*Se crea una nueva grilla que integra a las anteriores*/
+#grillaPrincipal {
+    display: grid;
+    grid-template-areas:
+    "redesSociales principal principal principal"
+    "redesSociales queHacemosHome queHacemosHome queHacemosHome"
+    "pie pie pie pie";
+
+    grid-template-rows: auto auto auto ;
+    grid-template-columns: 3vw 3fr 3fr 3fr; 
+}
+
+/*Fin de estilos de home page */
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Inicio de estilos pagina Que hacemos */
+
+#tituloQueHacemos {
+    padding-top: 1.5em;
+    padding-left: 2em;
+    grid-area: tituloQueHacemos;
+    margin-bottom: 3%;
+    color: #f5245f;
+}
+
+#descQueHacemos {
+    padding-left: 7em;
+    color: white;
+    grid-area: descQueHacemos;
+}
+
+.h2QueHacemos {
+    margin-bottom: 5%;
+    color: #A6A6A6;
+    text-align: center;
+}
+
+.pQueHacemos {
+    font-size: 1.3em;
+    color: white;
+}
+
+.linkQueHacemos {
+    font-size: 1em;
+    text-align: left !important;
+    color: white;
+    text-decoration: underline;
+}
+
+#redesQueHacemos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: redesQueHacemos;
+
+}
+
+#eventosQueHacemos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: eventosQueHacemos;
+}
+
+#disenioQueHacemos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: disenioQueHacemos;
+}
+
+#publicidadQueHacemos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: publicidadQueHacemos;
+}
+
+#animacionQueHacemos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: animacionQueHacemos;
+}
+
+#efectosQueHacemos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: efectosQueHacemos;
+}
+
+#queHacemos {
+    display: grid;
+    grid-template-areas: 
+    "redesQueHacemos eventosQueHacemos"
+    "disenioQueHacemos publicidadQueHacemos"
+    "animacionQueHacemos efectosQueHacemos";
+
+    grid-template-rows: auto auto auto ;
+    grid-template-columns: 1fr 1fr; 
+    grid-area: queHacemos;
+    grid-row-gap: 0.5em;
+    grid-column-gap: 0.5em;
+}
+
+#queHacemosContenido {
+    display: grid;
+    grid-template-areas: 
+    "tituloQueHacemos tituloQueHacemos . ."
+    "descQueHacemos descQueHacemos . ."
+    " .queHacemos queHacemos .";
+
+    grid-template-rows: auto auto auto ;
+    grid-template-columns: 1fr 2fr 2fr 1fr; 
+
+    grid-area: queHacemosContenido;
+}
+
+#grillaQueHacemos {
+    display: grid;
+    grid-template-areas: 
+    "cabeza cabeza cabeza"
+    "redesSociales queHacemosContenido queHacemosContenido"
+    "pie pie pie ";
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 3vw 3fr 3fr; 
+}
+
+.mBotx10 {
+    margin-bottom: 10px;
+}
+
+/* Fin estilos que hacemos */
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Inicio estilos nosotros*/
+
+#h1Nosotros {
+    padding-top: 1em;
+    padding-left: 1em;
+    margin-bottom: 3%;
+    color: #f5245f;
+    grid-area: tituloQuienesSomos;
+}
+
+.h2Nosotros {
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.personas {
+    border-radius: 100%;
+    width: 12vw;
+    grid-area: fotoPersonas;
+}
+
+#juan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: juan;
+}
+
+ #santiago {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: santiago;
+}
+
+#rodrigo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: rodrigo;
+}
+
+#karina{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: karina;
+}
+
+#carlos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: carlos;
+}
+
+#denis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: denis;
+}
+
+#personasGrid {
+    display: grid;
+    grid-template-areas: 
+    "juan santiago rodrigo"
+    "karina carlos denis";
+
+    grid-template-rows: auto auto ;
+    grid-template-columns: auto auto auto ; 
+
+    grid-area: personas;
+}
+
+#nosotrosContenido {
+    display: grid;
+    grid-template-areas:
+    "tituloQuienesSomos tituloQuienesSomos."
+    "personas personas personas";
+
+    grid-template-rows: auto auto auto ;
+    grid-template-columns: auto auto auto ; 
+
+    grid-area: nosotrosContenido;
+}
+
+#grillaNosotros {
+    display: grid;
+    grid-template-areas:
+    "cabeza cabeza cabeza"
+    "redesSociales nosotrosContenido nosotrosContenido"
+    "pie pie pie";
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 3vw auto auto ; 
+
+    grid-area: nosotrosContenido;
+}
+
+@media (min-width: 375px) { 
+    .personas {
+        width: 50vw;
+    }
+ }
+
+@media (min-width: 425px) { 
+    .personas {
+        width: 40vw;
+    }
+ }
+
+@media (min-width: 576px) { 
+    .personas {
+        width: 40vw;
+    }
+ }
+
+@media (min-width: 768px) { 
+    .personas {
+        width: 20vw;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .personas {
+        width: 15vw;
+    }
+ }
+
+/*Fin de estilos de nosotros */
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Inicio de estilos pagina proyectos */
+
+#tituloProyectos {
+    padding-top: 1.5em;
+    padding-left: 2em;
+    margin-bottom: 3%;
+    color: #f5245f;
+    grid-area: tituloProyectos;
+}
+
+.h2Proyectos {
+    text-align: center;
+}
+
+#row2 {
+    order: 0;
+}
+
+.col1 {
+    order: 2;
+    padding-top: 20vh;
+}
+
+.col2 {
+    order: 1;
+}
+
+.colText {
+    padding-top: 20vh;
+}
+
+#art1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art1;
+}
+
+#art2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art2;
+}
+
+#art3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art3;
+}
+
+#art4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art4;
+}
+
+#art5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art5;
+}
+
+#art6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art6;
+}
+
+#art7 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art7;
+}
+
+#art8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art8;
+}
+
+#art9 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art9;
+}
+
+#art10 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: art10;
+}
+
+#ultimosProyectos {
+    display: grid;
+    grid-template-areas: 
+    "art1 art2 art3"
+    "art1 art4 art5";
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto ; 
+
+    grid-area: ultimosProyectos;
+}
+
+#ultimasProducciones {
+    display: grid;
+    grid-template-areas: 
+    "art7 art8 art6"
+    "art9 art10 art6";
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto ; 
+
+    grid-area: ultimasProducciones;
+}
+
+#proyectosContenido {
+    display: grid;
+    grid-template-areas: 
+    "tituloProyectos . ."
+    "ultimosProyectos ultimosProyectos ultimosProyectos"
+    'ultimasProducciones ultimasProducciones ultimasProducciones';
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto ; 
+
+    grid-area: proyectosContenido;
+}
+
+#grillaPrincipalProyectos {
+    display: grid;
+    grid-template-areas: 
+    "cabeza cabeza cabeza"
+    "redesSociales proyectosContenido proyectosContenido"
+    'pie pie pie';
+
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 3vw auto auto ; 
+}
+
+/*Fin de estilos de proyectos */
+
+/*-------------------------------------------------------------------------------------------*/
+
+/*Inicio de estilos pagina de contacto */
+label {
+    font-size: 1.5em;
+    color: #A6A6A6;
+}
+
+ #labelNombre{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em;
+    grid-area: labelNombre;
+ }
+
+ #inputNombre {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em;
+    grid-area: inputNombre;
+ }
+
+ #labelEmail {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em;
+    grid-area: labelEmail;
+ }
+
+ #inputEmail {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em;
+    grid-area: inputEmail;
+ }
+
+#labelConsulta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em;
+    grid-area: labelConsulta;
+} 
+
+#textAreaConsulta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em;
+    grid-area: textAreaConsulta;
+}
+
+#btnSubmit {
+    grid-area: btnSubmit;
+}
+
+#btnCancel {
+    grid-area: btnCancel;
+}
+
+
+#formularioContacto {
+    display: grid;
+    grid-template-areas: 
+    "labelNombre labelNombre"
+    "inputNombre inputNombre"
+    "labelEmail labelEmail"
+    "inputEmail inputEmail"
+    "labelConsulta labelConsulta"
+    "textAreaConsulta textAreaConsulta"
+    "btnSubmit btnCancel";
+
+    grid-template-rows: 10% 10% 10% 10% 10% 25% 8%;
+    grid-template-columns:  auto auto; 
+
+    padding-right: 10em;
+    
+    grid-area: formularioContacto;
+}
+
+#direccion {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: direccion;
+}
+
+#telefono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: telefono;
+}
+
+#email {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: column;
+    padding: 2em;
+    grid-area: email;
+}
+
+#datosContacto {
+    display: grid;
+    grid-template-areas: 
+    "direccion"
+    "telefono"
+    "email";
+
+    grid-template-rows: 20vh 20vh 20vh;
+    grid-template-columns:  auto; 
+
+    grid-area: datosContacto;
+}
+
+#contenedorFormularioContacto {
+    display: grid;
+    grid-template-areas: 
+    "formularioContacto ";
+
+    grid-template-rows: auto ;
+    grid-template-columns:  auto; 
+
+    grid-area: contenedorFormularioContacto;
+
+
+} 
+
+#h1Contacto {
+    padding-top: 1.5em;
+    padding-left: 2em;
+    margin-bottom: 3%;
+    color: #f5245f;
+    grid-area: h1Contacto;
+}
+
+
+
+#contacto {
+    display: grid;
+    grid-template-areas: 
+    "h1Contacto . "
+    "datosContacto contenedorFormularioContacto";
+
+    grid-template-rows: 15vh ;
+    grid-template-columns:  auto auto; 
+
+    grid-area: contacto;
+}
+
+#grillaContacto {
+    display: grid;
+    grid-template-areas: 
+    "cabeza cabeza cabeza"
+    "redesSociales contacto contacto"
+    'pie pie pie';
+    grid-template-rows: 10vh auto auto;
+    grid-template-columns:  3vw auto auto; 
+
+    grid-area: contacto;
+}
+
+.colorBoton {
+    background-color: transparent;
+    border-color: #f5245f;
+    color: #A6A6A6;
+}
+
+.colorBoton:hover {
+    background-color: transparent;
+    border-color: #f5245f;
+    color: #A6A6A6;
+}
+
+
+/*404*/
+#h2404 {
+    padding-top: 1em;
+    padding-left: 1em;
+    margin-bottom: 3%;
+    color: #f5245f;
+    grid-area: tituloQuienesSomos;
+}
+
+#p404 {
+    padding-left: 3em;
+}

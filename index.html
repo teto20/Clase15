@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <meta name="description" content="En Montana nos interesa contar tu historia y hacerlo de la mejor manera.">
+    <meta name="keywords" contecnt="FOTOGRAFIA, VIDEO, EVENTOS, COMERCIALES, REDES SOCIALES, DISEÑO GRAFICO">
+    <title>Monatana</title>
+</head>
+<body>
+    <div>
+        <div id="overlayVideo"></div> <!--Se utiliza unicamente para dar una opacidad al video-->
+            <header id="header">
+                <nav class="bgc navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" href="index.html"><img src="Media/logo.png" alt="logo" title="logo del sitio"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Montana <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="nosotros.html">Quienes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quehacemos.html">Que hacemos</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="proyectos.html">Proyectos</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </nav>
+            </header>
+    <div id="grillaPrincipal">
+        <div id="overlayVideo"></div> <!--Se utiliza unicamente para dar una opacidad al video-->
+        <video autoplay muted loop id="videoFondo">
+            <source src="Media/video.mp4" type="video/mp4">
+        </video>
+
+        <aside id="principal">
+            <small>Monatana</small><br>
+            <h1>
+                <span>Productora</span><br>
+                    audiovisual
+            </h1>
+            <p>Nos interesa contar tu historia, y hacerlo de la mejor manera. <br> vida, tu música, tu empresa. Encontrar el mejor vehículo para cada idea.</p>
+        </aside>
+
+        <!--Falta aplicar algunos estilos para mejorar la lectura de los textos -->
+        <section id="queHacemosHome"> 
+            <h2 id="tituloQueHacemosHome">¿Qué hacemos?</h2> 
+            <p id="descQueHacemosHome">Nos adaptamos a las necesidades de cada cliente desarrollando los siguientes servicios</p>
+            <article id="redesSocialesHome">
+                <h3>Contenido para redes sociales</h3>
+                <p>Producimos material audiovisual y grafico de calidad, para que tus redes sobresalgan sobre la competencia.</p>
+            </article>
+            <article id="eventosHome">
+                <h3>Cobertura de eventos</h3>
+                <p>Ofrecemos servicios de fotografía y videografía, así como la posproducción de todo el material en el menor tiempo posible.</p>
+            </article>
+            <article id="diseñoGraficoHome">
+                <h3>Diseño gráfico</h3>
+                <p>Producimos material grafico tanto para pantallas como imprenta. Contamos con experiencia en diseño de logos, identidad gráfica, cartelería y publicaciones impresas.</p>
+            </article>
+            <article id="publicidadHome">
+                <h3>Realización publicitaria</h3>
+                <p>Te asistimos en todo el proceso para la creación de tu propio spot publicitario. Desde la idea a la realización y la posproducción, ofrecemos un servicio de principio a fin.</p>
+            </article>
+        </section>
+
+        <div class="redesSociales"> <!--Falta linkear redes sociales-->
+            <a href=""><img src="Media/facebook.svg" alt="facebook"></a>
+            <a href=""><img src="Media/instagram.svg" alt="instagram"></a>
+            <a href=""><img src="Media/twitter.svg" alt="twitter"></a>
+            <a href=""><img src="Media/you.svg" alt="youtube"></a>
+        </div>
+
+        <!--Footer sencillo, en un futuro vere de colocarle algo mas -->
+        <footer class="pieDePagina">
+            <span id="derechos">© Montana Studio. Todos los derechos reservados.</span>
+            <span id="irArribaTexto">Ir Arriba</span><a title="Ir Arriba" href="#"><img class="goTop" src="Media/arriba.svg" alt="ir arriba"/></a>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
